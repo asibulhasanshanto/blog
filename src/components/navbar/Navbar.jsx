@@ -1,7 +1,11 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-
+import profile_pic from "../../assets/images/profile_pic.jpg";
+import { AiFillGithub } from "react-icons/ai";
+import {SiUpwork} from "react-icons/si";
+import {RiProfileLine} from "react-icons/ri";
+import {RiFacebookCircleFill} from "react-icons/ri";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -80,8 +84,8 @@ const Navbar = () => {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
+                        src={profile_pic}
+                        alt="profile pic"
                       />
                     </Menu.Button>
                   </div>
@@ -134,7 +138,72 @@ const Navbar = () => {
                           </a>
                         )}
                       </Menu.Item> */}
-                      hi
+                      <div className="w-full p-4">
+                        <div className="profile-pic w-full flex items-center justify-center py-5">
+                          <img
+                            className="w-28 h-28 rounded-full"
+                            src={profile_pic}
+                            alt="profile pic"
+                          />
+                        </div>
+                        <div className="name w-full flex flex-col items-center justify-center py-5">
+                          <p className="text-xl ">Md. Asibul Hasan Shanto</p>
+                          <p className="text-2xl text-gray-500 font-bold">
+                            Software Enginer
+                          </p>
+                        </div>
+                        <div className="w-full space-y-1">
+                          <p className="text-sm mb-1  ">Contact</p>
+                          <div className=" text-gray-500 flex text-sm items-center">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={1.5}
+                              stroke="currentColor"
+                              className="w-5 h-5 mr-2"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                              />
+                            </svg>
+
+                            <p className="text-sm">
+                              asibulhasan.rucse.18@gmail.com
+                            </p>
+                          </div>
+                          <div className=" text-gray-500 flex text-sm items-center">
+                            <AiFillGithub className="h-5 w-5 mr-2" />
+
+                            <p className="text-sm">
+                              <a href="https://github.com/asibulhasanshanto" target="blank">github.com/asibulhasanshanto</a>
+                            </p>
+                          </div>
+                          <div className=" text-gray-500 flex text-sm items-center">
+                            <SiUpwork className="h-5 w-5 mr-2" />
+
+                            <p className="text-sm">
+                              <a href="https://www.upwork.com/freelancers/~01d806c95749feb926" target="blank">Asibul Hasan</a>
+                            </p>
+                          </div>
+                          <div className=" text-gray-500 flex text-sm items-center">
+                            <RiProfileLine className="h-5 w-5 mr-2" />
+
+                            <p className="text-sm">
+                              <a href="https://asibulhasanshanto.github.io" target="blank">asibulhasanshanto.github.io</a>
+                            </p>
+                          </div>
+                          <div className=" text-gray-500 flex text-sm items-center">
+                            <RiFacebookCircleFill className="h-5 w-5 mr-2" />
+
+                            <p className="text-sm">
+                              <a href="https://www.facebook.com/asibulhasan.shanto.3/" target="blank">facebook.com/asibulhasan.shanto.3/</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </Menu.Items>
                   </Transition>
                 </Menu>
