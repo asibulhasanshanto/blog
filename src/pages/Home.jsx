@@ -9,8 +9,8 @@ const Home = () => {
     <Layout>
       <Navbar />
       <div className="container mt-4 mx-auto p-2 ">
-        <div className="grid grid-cols-4 space-x-4 ">
-          <div className="category-card ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+          <div className="category-card">
             <img
               src={solidity_img}
               className="w-full h-48 object-cover"
@@ -22,7 +22,7 @@ const Home = () => {
           <div className="category-card ">
             <img
               src={mern_img}
-              className=" w-full h-48  objectcoverr"
+              className=" w-full h-48  object-cover"
               alt="mern"
             />
             <h3 className="text-2xl p-2 text-gray-900">MERN</h3>
