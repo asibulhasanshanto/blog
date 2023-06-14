@@ -55,7 +55,7 @@ const WhatIsBlockchain = () => {
             নেটওয়ার্ক এর প্রত্যেক নোড এর কাছে এই ব্লক এর একটি কপি থাকে।
           </p>
 
-          <h2 className="h2">Transactions</h2>
+          <h2 className="h2">Transaction</h2>
           <p className="paragraph">
             ব্লকচেইন হলো একটি globally shared, Transactional database.সবাই এই
             ডাটাবেজ এ থাকা রেকর্ড পড়তে পারবে যদি সে এই নেটওয়ার্ক এ যুক্ত থাকে।
