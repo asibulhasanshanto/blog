@@ -5,6 +5,11 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import EtheriumBlogs from "./pages/bn/etherium/EtheriumBlogs";
+// lazy load WhatIsBlockchain
+import React, { lazy, Suspense } from "react";
+const WhatIsBlockchain = lazy(() =>
+  import("./pages/bn/etherium/1.what_is_blockchain/WhatIsBlockchain")
+);
 
 const router = createBrowserRouter([
   {
@@ -22,7 +27,21 @@ const router = createBrowserRouter([
       },
       {
         path: "web3_etherium_solidity",
-        element: <EtheriumBlogs />,
+
+        children: [
+          {
+            path: "",
+            element: <EtheriumBlogs />,
+          },
+          {
+            path: "what_is_blockchain",
+            element: (
+              <Suspense fallback={<div>Loading...</div>}>
+                <WhatIsBlockchain />
+              </Suspense>
+            ),
+          },
+        ],
       },
     ],
   },

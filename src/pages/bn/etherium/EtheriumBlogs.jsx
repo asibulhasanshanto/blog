@@ -1,15 +1,16 @@
 import profile_pic from "../../../assets/images/profile_pic.jpg";
+import blockchain_pic from "../../../assets/images/web3/1.blockchain/blockchain.jpg";
+import { Link } from "react-router-dom";
 
 const posts = [
   {
     id: 1,
-    title: "Boost your conversion rate",
-    href: "#",
+    title: "ব্লকচেইন কি?",
+    href: "/blog/bn/web3_etherium_solidity/what_is_blockchain",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    date: "Mar 16, 2020",
+      "সহজ কথায় বলতে গেলে ব্লকচেইন হলো distributed immutable ledger যেটা সম্পূর্ণ ভাবে transparent। কি? শুনতে সহজ লাগছে না তো? তাহলে একটু ব্যাখ্যা করা যাক। সম্পূর্ণরূপে transparent বলতে বোঝানো হয়েছে যে ব্লকচেইন এর মধ্যে সংগৃহীত সকল ইনফরমেশন ব্লকচেইন নেটওয়ার্কে থাকা সকল পারটিসিপেন্টস দের কাছে উন্মুক্ত। যে কেউ এই ইনফরমেশন দেখতে পারবে,পড়তে পারবে।",
+    imageUrl: blockchain_pic,
+    date: " জুন ১৫, ২০২৩",
     datetime: "2020-03-16",
     //   category: { title: "Marketing", href: "#" },
     author: {
@@ -61,10 +62,10 @@ export default function EtheriumBlogs() {
                   </div>
                   <div className="group relative max-w-xl">
                     <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                      <a href={post.href}>
+                      <Link to={post.href}>
                         <span className="absolute inset-0" />
                         {post.title}
-                      </a>
+                      </Link>
                     </h3>
                     <p className="mt-5 text-sm leading-6 text-gray-600">
                       {post.description}
